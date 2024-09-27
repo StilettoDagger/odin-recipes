@@ -1,12 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+	line-height: 1.5;
+}
+
 html {
 	font-size: 20px;
-	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 body {
 	background-color: antiquewhite;
 	text-align: center;
 	margin: 0;
+	font-family: "Roboto", Arial, sans-serif;
 }
 
 h1.title {
@@ -19,6 +25,7 @@ h1.title {
 h1.title a {
 	text-decoration: none;
 	color: inherit;
+	font-size: 3rem;
 }
 
 .container {
@@ -77,12 +84,13 @@ h1.title a {
 }
 
 .recipe-card {
-    width: 70vw;
-    margin: 1em auto;
-    color: whitesmoke;
+	width: 70%;
+	margin: 1em auto;
+	color: whitesmoke;
 	border-radius: 20px;
 	padding: 1em;
 	border: 4px dashed;
+	box-shadow: 0 0 20px black;
 }
 
 .recipe-card h2 {
@@ -92,14 +100,18 @@ h1.title a {
 	padding: 0.7em;
 	border: 2px solid whitesmoke;
 	border-radius: 20px;
+	font-size: 2rem;
 }
 
 .recipe-card h3 {
 	border-bottom: 1px solid whitesmoke;
-	padding-bottom: 0.5em;;
+	padding-bottom: 0.5em;
+	font-size: 1.5rem;
+	text-transform: uppercase;
 }
 
-.recipe-card ul li, .recipe-card ol li {
+.recipe-card ul li,
+.recipe-card ol li {
 	text-align: left;
 	margin: 0.5em;
 }
@@ -110,7 +122,7 @@ h1.title a {
 
 .video-link {
 	font-weight: bold;
-	color:rgb(253, 255, 106);
+	color: rgb(253, 255, 106);
 }
 
 .video-link::before {
@@ -128,11 +140,15 @@ h1.title a {
 }
 
 .instructions h3::before {
-	content: "📔 "
+	content: "📔 ";
 }
 
 .recipe-card.spaghetti {
-    background-image: radial-gradient(ellipse, rgb(134, 13, 13) 0%, rgb(0, 0, 0) 110%);
+	background-image: radial-gradient(
+		ellipse,
+		rgb(134, 13, 13) 0%,
+		rgb(0, 0, 0) 110%
+	);
 }
 
 .recipe-card.curry {
@@ -145,4 +161,36 @@ h1.title a {
 
 .recipe-card.potatoes {
 	background-image: radial-gradient(ellipse, rgb(119, 112, 59) 0%, black 110%);
+}
+
+.recipe-info li h3 {
+	border: none;
+}
+
+.recipe-info .overview li h3,
+.recipe-info .overview li p {
+	font-size: 0.75em;
+	margin: 2px;
+}
+
+.recipe-info ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.recipe-info .overview li {
+	list-style: none;
+	border-left: 2px solid rgb(148, 147, 147);
+	padding-left: 4px;
+}
+
+.overview h3.title {
+	margin-top: 2px;
+}
+
+.overview h3.title::before {
+	content: "❔ ";
 }
